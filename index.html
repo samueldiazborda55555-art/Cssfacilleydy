@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mi primer maqueta</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+
+    <style>
+        .caja1 {
+            height: 100px;
+            background-color: #C0969A;
+        }
+
+        .caja2 {
+            height: 300px;
+            background-color: #965C61;
+        }
+
+        .caja3 {
+            height: 300px;
+            background-color: #EAC6C9;
+        }
+
+        .caja4 {
+            height: 300px;
+            background-color: #6B3035;
+        }
+
+        .caja5 {
+            height: 300px;
+            background-color: #411216;
+        }
+
+        .caja6 {
+            height: 300px;
+            background-color: #dbbbba;
+        }
+
+        .caja7 {
+            height: 300px;
+            background-color: #E8D1D7;
+        }
+
+        .caja8 {
+            height: 300px;
+            background-color: #724368;
+        }
+
+        .caja9 {
+            height: 300px;
+            background-color: #E4D1E8;
+        }
+
+        .caja10 {
+            height: 300px;
+            background-color: #FFB0B2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <nav
+                class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 caja1 d-flex p-4 justify-content-center align-items-center flex-wrap">
+
+                <a class="btn btn-outline-light" href="#" role="button">
+                    Estructura y sintaxis
+                </a>
+
+                <img src="./img/Icono.png" height="50px" alt="Estructura y Sintaxis">
+
+                <a class="btn btn-outline-light" href="#" role="button">
+                    Niveles de especificidad
+                </a>
+
+                <img src="./img/Icono.png" height="50px" alt="Pseudo Clases y Pseudo Elementos">
+
+                <a class="btn btn-outline-light" href="#" role="button">
+                    Pseudo Clases y Pseudo Elementos
+                </a>
+
+                <img src="./img/Icono.png" height="50px" alt="Pseudo Clases y Pseudo Elementos">
+                <a class="btn btn-outline-light" href="#" role="button">
+                    Box Model
+                </a>
+                <img src="./img/Icono.png" height="50px" alt="Box Model">
+
+            </nav>
+
+            <header class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-12 col-xxl-12 caja1">
+                caja1
+            </header>
+
+            <img src="./img/banner.jpeg"
+                alt="foto de aprendices aprendiendo css"
+                height="660px"
+                width="100%">
+
+            <!-- CAJA 2: BANNER / HERO -->
+
+            <div
+                class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-12 col-xxl-12 caja2 d-flex flex-column justify-content-center align-items-center text-white text-center p-4">
+
+                <h1>Domina el mundo digital</h1>
+                <p class="lead">
+                    Desarrolla tus habilidades creando sitios web y aplicaciones desde cero.
+                </p>
+                <a href="#" class="btn btn-primary btn-lg">
+                    Comienza ahora
+                </a>
+
+            </div>
+            <!-- CAJAS 3, 4, 5: TARJETAS DE CARACTERÍSTICAS -->
+            <div
+                class="col-6 col-sm-6 col-md-2 col-lg-2 col-xl-4 col-xxl-4 caja3 p-4 text-white"
+                style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('img/html.png') center/cover no-repeat;">
+
+                <h3>Fundamentos de HTML</h3>
+
+                <p>
+                    Construye páginas web mediante etiquetas que permiten organizar y estructurar el contenido.
+                </p>
+
+            </div>
+
+            <div
+                class="col-6 col-sm-6 col-md-2 col-lg-2 col-xl-4 col-xxl-4 caja4 p-4 text-white"
+                style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/css.jpg') center/cover no-repeat;">
+
+                <h3>Diseño con CSS</h3>
+
+                <p>
+                    Personaliza tus páginas web con estilos modernos, animaciones y diseños adaptables.
+                </p>
+
+            </div>
+
+            <div
+                class="col-6 col-sm-6 col-md-10 col-lg-10 col-xl-4 col-xxl-4 caja5 p-4 text-white"
+                style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/bbo.jpeg') center/cover no-repeat;">
+
+                <h3>Herramientas Bootstrap</h3>
+
+                <p>
+                    Crea interfaces profesionales utilizando plantillas, columnas y elementos interactivos.
+                </p>
+
+            </div>
+
+            <!-- CAJAS 6 A 10: SECCIÓN INFERIOR -->
+
+            <div
+                class="col-6 col-sm-6 col-md-12 col-lg-12 col-xl-3 col-xxl-3 caja6 p-3 text-white d-flex flex-column align-items-center align-items-xl-start">
+
+                <h5>Recursos de Aprendizaje</h5>
+
+                <img src="./img/imagen5.png"
+                    alt="Icono de navegación"
+                    class="img-fluid mb-2"
+                    style="max-height: 60%;">
+
+                <ul class="list-unstyled text-center text-xl-start">
+                    <li>
+                        <a href="#" class="text-white text-decoration-none">
+                            Guías de programación
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="text-white text-decoration-none">
+                            Proyectos prácticos
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div
+                class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-2 col-xxl-2 caja7 p-3 text-white d-flex flex-column align-items-center justify-content-center text-center">
+                <h4>+800</h4>
+                <small class="mb-2">
+                    Desarrolladores formados
+                </small>
+                <img src="./img/imagen4.png"
+                    alt="Icono de alumnos"
+                    class="img-fluid"
+                    style="max-height: 60%;">
+            </div>
+            <div
+                class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-2 col-xxl-2 caja8 p-3 text-white d-flex flex-column align-items-center justify-content-center text-center">
+
+                <h4>100%</h4>
+                <small class="mb-2">
+                    Aprendizaje aplicado
+                </small>
+                <img src="./img/imagen3.png"
+                    alt="Icono de práctico"
+                    class="img-fluid"
+                    style="max-height: 60%;">
+            </div>
+            <div
+                class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-2 col-xxl-2 caja9 p-3 text-white d-flex flex-column align-items-center justify-content-center text-center">
+
+                <h4>Todo el tiempo</h4>
+                <small class="mb-2">
+                    Plataforma disponible
+                </small>
+
+                <img src="./img/imagen1.png"
+                    alt="Icono de acceso ilimitado"
+                    class="img-fluid"
+                    style="max-height: 60%;">
+
+            </div>
+            <div
+                class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-3 col-xxl-3 caja10 p-3 text-white d-flex flex-column align-items-center align-items-xl-start">
+
+                <h5>Comunícate con nosotros</h5>
+
+                <img src="./img/imagen2.png"
+                    alt="Icono de contacto"
+                    class="img-fluid mb-2"
+                    style="max-height: 60%;">
+
+                <p class="small text-center text-xl-start mb-0">
+                    soporte@programacion.com<br>
+                    © 2026 Academia Digital
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
