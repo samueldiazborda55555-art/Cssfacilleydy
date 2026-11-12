@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 <!doctype html>
 <html lang="es">
 
@@ -22,6 +20,10 @@
 
         .caja2 {
             min-height: 300px;
+            background-color: #965C61;
+        }
+
+        .caja-intro {
             background-color: #965C61;
         }
 
@@ -70,6 +72,15 @@
             height: auto;
             display: block;
         }
+
+        /* Código dentro de las cajas */
+        pre {
+            background-color: rgba(0, 0, 0, 0.15);
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            white-space: pre-wrap;
+        }
     </style>
 </head>
 
@@ -113,20 +124,138 @@
                 <h2 class="text-white text-center">Box Model</h2>
             </div>
 
-            <!-- CAJA 2 -->
-            <div class="col-12 caja2"></div>
+            <!-- CAJA 2: BANNER -->
+            <div class="col-12 caja2 p-0">
+                <img class="banner" src="./img/banner-boxmodel.png" alt="Banner de Box Model">
+            </div>
+
+            <!-- INTRO: ¿Qué es el Box Model? -->
+            <div class="col-12 caja-intro p-4 text-white">
+                <h3>¿Qué es el Box Model?</h3>
+                <p>
+                    El Box Model es una de las bases fundamentales para entender cómo se comportan los elementos
+                    en una página web. Si alguna vez te has preguntado por qué un botón no se alinea como esperas
+                    o por qué un div tiene más espacio del que debería, el Box Model tiene la respuesta.
+                </p>
+                <p>
+                    Imagina que cada elemento HTML es una caja. Esa caja no es solo el contenido que ves:
+                    está compuesta por varias capas que definen su tamaño y su espacio en la página.
+                </p>
+                <ul>
+                    <li><strong>Content (contenido):</strong> donde se muestra el texto, las imágenes u otros medios.
+                    </li>
+                    <li><strong>Padding (relleno):</strong> el espacio entre el contenido y el borde.</li>
+                    <li><strong>Border (borde):</strong> el límite que rodea el padding y el contenido.</li>
+                    <li><strong>Margin (margen):</strong> el espacio exterior que separa el elemento de otros.</li>
+                </ul>
+            </div>
 
             <!-- CAJAS 3, 4 Y 5 -->
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 caja3 p-4 text-white"></div>
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 caja4 p-4 text-white"></div>
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 caja5 p-4 text-white"></div>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 caja3 p-4 text-dark">
+                <h4>Content y Padding</h4>
+                <p>
+                    El <strong>content</strong> es el área donde se muestra el texto o las imágenes.
+                    Su tamaño se controla con <code>width</code> y <code>height</code>.
+                </p>
+                <p>
+                    El <strong>padding</strong> es un colchón invisible entre el contenido y el borde.
+                </p>
+                <pre>padding: 10px 20px;</pre>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 caja4 p-4 text-white">
+                <h4>Border y Margin</h4>
+                <p>
+                    El <strong>border</strong> es la línea que rodea el padding y el contenido.
+                </p>
+                <pre>border: 2px solid black;</pre>
+                <p>
+                    El <strong>margin</strong> es el espacio exterior que separa un elemento de otros.
+                </p>
+                <pre>margin: 10px 20px;</pre>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 caja5 p-4 text-white">
+                <h4>Box sizing</h4>
+                <p>
+                    Controla cómo se calcula el ancho y el alto de un elemento.
+                </p>
+                <p>
+                    <strong>content-box</strong> (por defecto): el padding y el borde se suman al tamaño total.
+                    Con width 200px, padding 20px y borde 5px, el total es 250px.
+                </p>
+                <p>
+                    <strong>border-box</strong> (recomendado): el padding y el borde quedan dentro del tamaño definido.
+                </p>
+                <pre>* {
+    box-sizing: border-box;
+}</pre>
+            </div>
 
             <!-- CAJAS 6 A 10 -->
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 caja6 p-3 text-white"></div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-2 caja7 p-3 text-white"></div>
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-2 caja8 p-3 text-white"></div>
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-2 caja9 p-3 text-white"></div>
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 caja10 p-3 text-white"></div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 caja6 p-3 text-dark">
+                <h5>Formularios</h5>
+                <p>
+                    Cada campo de un formulario es una caja: tiene contenido, padding, borde y margen.
+                    Con <code>border-box</code> el padding y el borde no cambian el ancho total del campo.
+                </p>
+                <pre>.form-input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+}</pre>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-2 caja7 p-3 text-dark">
+                <h5>Técnicas útiles</h5>
+                <p>
+                    <strong>Margen negativo:</strong> permite superponer elementos.
+                </p>
+                <pre>margin-top: -20px;</pre>
+                <p>
+                    <strong>Overflow:</strong> decide qué pasa cuando el contenido es más grande que su caja
+                    (<code>hidden</code>, <code>scroll</code>, <code>auto</code> o <code>visible</code>).
+                </p>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-2 caja8 p-3 text-white">
+                <h5>Debugging</h5>
+                <p>
+                    Añade un borde y un fondo semitransparente para ver la estructura de tus elementos.
+                </p>
+                <pre>.debug {
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid red;
+}</pre>
+                <p>
+                    También puedes inspeccionar cualquier elemento con las DevTools del navegador
+                    para ver su Box Model.
+                </p>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-2 caja9 p-3 text-dark">
+                <h5>Mejores prácticas</h5>
+                <ul>
+                    <li>Usa un reset CSS con <code>box-sizing: border-box</code>.</li>
+                    <li>Usa unidades relativas (<code>%</code>, <code>em</code>, <code>rem</code>) en lugar de solo
+                        <code>px</code>.
+                    </li>
+                    <li>Mantén un espaciado consistente.</li>
+                    <li>Usa <code>min-height</code> en lugar de alturas fijas.</li>
+                </ul>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 caja10 p-3 text-dark">
+                <h5>Problemas comunes</h5>
+                <ul>
+                    <li><strong>Desbordamiento:</strong> usa <code>overflow: auto;</code>.</li>
+                    <li><strong>Altura del 100%:</strong> el contenedor padre debe tener una altura definida.</li>
+                    <li><strong>Floats:</strong> usa <code>clear: both;</code> o un clearfix.</li>
+                    <li><strong>Colapso de márgenes:</strong> cuando dos márgenes verticales se tocan, pueden
+                        colapsar en vez de sumarse. Usa padding o Flexbox con <code>gap</code>.</li>
+                </ul>
+            </div>
 
         </div>
     </div>
@@ -139,4 +268,3 @@
 </body>
 
 </html>
->>>>>>> Stashed changes
