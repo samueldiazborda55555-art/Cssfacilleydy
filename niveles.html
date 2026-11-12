@@ -4,63 +4,64 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Niveles de Especificidad - CSS</title>
-
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-    <!-- Estilos personalizados -->
     <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
         .caja1 {
             min-height: 100px;
-            background-color: #C0969A;
+            background-color: #C58F96;
         }
 
         .caja2 {
             min-height: 300px;
-            background-color: #965C61;
+            background-color: #873F50;
         }
 
         .caja3 {
             min-height: 300px;
-            background-color: #EAC6C9;
+            background-color: #F3DDE1;
         }
 
         .caja4 {
             min-height: 300px;
-            background-color: #6B3035;
+            background-color: #A65368;
         }
 
         .caja5 {
             min-height: 300px;
-            background-color: #411216;
+            background-color: #572633;
         }
 
         .caja6 {
             min-height: 300px;
-            background-color: #dbbbba;
+            background-color: #E8C6CA;
         }
 
         .caja7 {
             min-height: 300px;
-            background-color: #E8D1D7;
+            background-color: #F1DDE2;
         }
 
         .caja8 {
             min-height: 300px;
-            background-color: #724368;
+            background-color: #754052;
         }
 
         .caja9 {
             min-height: 300px;
-            background-color: #E4D1E8;
+            background-color: #EAD9E5;
         }
 
         .caja10 {
             min-height: 300px;
-            background-color: #FFB0B2;
+            background-color: #E99DA8;
         }
 
         .banner {
@@ -68,41 +69,258 @@
             height: auto;
             display: block;
         }
+
+        .imagen-especificidad {
+            width: 100%;
+            height: 130px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .tarjeta {
+            min-height: 300px;
+            padding: 20px;
+        }
+
+        .tarjeta h2 {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .tarjeta p,
+        .tarjeta li {
+            font-size: 15px;
+        }
+
+        /* BOTONES */
+
+        .btn-vino {
+            background-color: #572633;
+            border: 2px solid #572633;
+            color: white;
+        }
+
+        .btn-vino:hover {
+            background-color: #754052;
+            border-color: #754052;
+            color: white;
+        }
     </style>
+
 </head>
 
 <body>
 
     <div class="container-fluid">
         <div class="row">
+            <!-- CAJA 1: NAVEGACIÓN -->
+            <nav class="col-12 caja1 d-flex p-4 justify-content-center align-items-center flex-wrap gap-3"
+                aria-label="Navegación principal">
 
-            <!-- CAJA 1 -->
-            <div class="col-12 caja1 d-flex justify-content-center align-items-center">
-                <h2 class="text-white text-center">Niveles de especificidad</h2>
+                <a class="btn btn-outline-light" href="#estructura" role="button">
+                    Estructura y sintaxis
+                </a>
+
+                <img src="./img/Icono.png" height="50" alt="Icono de estructura" loading="lazy">
+
+                <a class="btn btn-outline-light" href="niveles.html" role="button">
+                    Niveles de especificidad
+                </a>
+
+                <img src="./img/Icono.png" height="50" alt="Icono de especificidad" loading="lazy">
+
+                <a class="btn btn-outline-light" href="pseudo.html" role="button">
+                    Pseudo Clases y Pseudo Elementos
+                </a>
+
+                <img src="./img/Icono.png" height="50" alt="Icono de pseudo clases" loading="lazy">
+
+                <a class="btn btn-outline-light" href="boxmodel.html" role="button">
+                    Box Model
+                </a>
+
+                <img src="./img/Icono.png" height="50" alt="Icono de Box Model" loading="lazy">
+
+            </nav>
+
+            <header class="col-12 caja2 p-0">
+
+                <img class="banner" src="img/bannerespecificidad.png" alt="Banner de especificidad CSS">
+
+            </header>
+
+            <aside id="que-es" class="col-12 col-md-6 caja3 text-dark p-4 d-flex flex-column justify-content-center">
+
+                <h1>Especificidad en CSS</h1>
+
+                Uno de los conceptos de CSS que más pasamos por alto es la especificidad, y es que CSS es un
+                lenguaje muy noble y flexible. Muchos de los problemas comunes a los que nos enfrentamos al escribir
+                CSS se pueden entender y por lo tanto, corregir con la especificidad.
+                </p>
+
+                <h2>¿Qué es la especificidad en CSS?</h2>
+                <p>
+                    La especificidad es uno de los conceptos claves de CSS. Es la manera en que los navegadores
+                    resuelven conflictos si diversas reglas son aplicadas a un mismo elemento, decidiendo qué estilos
+                    son más relevantes y por lo tanto, cuales serán aplicados.
+                </p>
+
+                <h2 id="como-funciona">¿Cómo funciona?</h2>
+                <p>
+                    Cuando un navegador carga una página web, combina el contenido (HTML) con la información de estilos
+                    (CSS). Procesa estos archivos en etapas. A diferencia de otros lenguajes, CSS no arroja un error ni
+                    se interrumpe si detecta una línea que no puede analizar, durante su lectura. La cascada de CSS lee
+                    de arriba hacia abajo, filtra y clasifica las reglas de acuerdo a su importancia, si no puede
+                    analizar un valor lo tomará como no válido y por lo tanto lo ignora.
+                </p>
+
+                <p>
+                    <strong>¿Qué pasa cuando hay coincidencia de elementos?</strong> Cuando se presenta conflicto CSS
+                    toma el ultimo valor escrito, si el conflicto es en la importancia de los estilos el navegador hará
+                    un cálculo para resolver qué estilo es más relevante.
+                </p>
+
+                <p>
+                    <strong>¿Cómo se toma el puntaje?</strong> Entre más específico sea un estilo, mayor será la
+                    probabilidad de que se aplique. Para esto el navegador determina por medio de “pesos” o puntajes que
+                    estilo es el más relevante para un elemento.
+                </p>
+
+            </aside>
+
+            <aside
+                class="col-12 col-md-6 caja5 p-3 d-flex flex-column justify-content-center align-items-center text-white">
+
+                <img class="img-fluid mb-3" src="img/especificidad0.png" alt="Modelo simplificado de especificidad CSS">
+                <p class="small text-center">
+                    !Important es la regla que tendrá más peso, sobreescribiendo casi cualquier estilo y al contrario el
+                    menos específico sería el selector universal, cualquier estilo más específico va a sobrescribirlo.
+                </p>
+
+            </aside>
+
+            <div id="puntajes" class="row g-0">
+
+                <!-- !IMPORTANT -->
+                <div class="col-12 col-md-4 col-lg-4 caja2 tarjeta text-white">
+                    <img class="imagen-especificidad" src="img/important.png" alt="Ilustración de !important">
+
+                    <h2>!important (1, 0, 0, 0, 0)</h2>
+
+                    <ul>
+                        <li>Reescribe cualquier estilo.</li>
+                        <li>Para el navegador es de alta prioridad.</li>
+                        <li>Hay que evitarlo o usarlo con mucha precaución.</li>
+                    </ul>
+                </div>
+
+                <!-- ESTILOS EN LÍNEA -->
+
+                <div class="col-12 col-md-4 col-lg-4 caja3 tarjeta text-dark">
+                    <img class="imagen-especificidad" src="img/incline.png" alt="Ilustración de estilos en línea">
+
+                    <h2>Estilos en línea (0, 1, 0, 0, 0)</h2>
+
+                    <ul>
+                        <li>Los estilos en línea aplicaran estilos nuevos sobre otros, aunque ya tengan clases o IDs.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- #ID -->
+
+                <div class="col-12 col-md-4 col-lg-4 caja4 tarjeta text-white">
+                    <img class="imagen-especificidad" src="img/id.png" alt="Ilustración de #ID">
+
+                    <h2>#ID (0, 0, 1, 0, 0)</h2>
+
+                    <ul>
+                        <li>Los ID tienen mayor peso que las clases y etiquetas.</li>
+                        <li>Pero al ser únicos es preferible usarlos para funcionalidad que para estilos.</li>
+                    </ul>
+                </div>
+
+                <!-- .CLASES, ATRIBUTOS Y PSEUDO CLASES -->
+
+                <div class="col-12 col-md-4 col-lg-4 caja5 tarjeta text-white">
+                    <img class="imagen-especificidad" src="img/clases.png" alt="Ilustración de clases">
+
+                    <h2>.Clases, atributos y pseudo clases (0, 0, 0, 1, 0)</h2>
+
+                    <ul>
+                        <li>Es mejor usar clases para dar estilos, combinados con una metodología como BEM tendrás una
+                            especificidad manejable.</li>
+                    </ul>
+                </div>
+
+                <!-- ELEMENTOS -->
+
+                <div class="col-12 col-md-4 col-lg-4 caja6 tarjeta text-dark">
+                    <img class="imagen-especificidad" src="img/elementos.png" alt="Ilustración de elementos">
+
+                    <h2>Elementos (0, 0, 0, 0, 1)</h2>
+
+                    <ul>
+                        <li>Los estilos aplicados a los elementos son los más básicos y fáciles de reescribir.</li>
+                    </ul>
+                </div>
+
+                <!-- SELECTOR UNIVERSAL -->
+
+                <div class="col-12 col-md-4 col-lg-4 caja7 tarjeta text-dark">
+                    <img class="imagen-especificidad" src="img/universal.png" alt="Ilustración de selector universal">
+
+                    <h2>Selector Universal (0, 0, 0, 0, 0)</h2>
+
+                    <ul>
+                        <li>El selector universal no tiene peso alguno y será reescrito por cualquier otra regla.</li>
+                    </ul>
+                </div>
+
+                <!-- EJEMPLO PRÁCTICO -->
+
+                <div class="col-12 col-md-6 caja8 tarjeta text-white">
+
+                    <h2>Ejemplo práctico</h2>
+
+                    <p>
+                        En este ejercicio hay dos reglas que afectan al mismo elemento. Aunque la regla de elemento
+                        botón está al final de la cascada, la regla de clase es más especifica y por tanto es la que se
+                        aplicara.
+                    </p>
+                    <p>
+                        Si nuestra regla incluye varios selectores el puntaje de estos se sumará, dandole mayor
+                        especificidadad.
+                    </p>
+                </div>
+
+                <!-- ALGUNOS CONSEJOS -->
+
+                <div id="consejos" class="col-12 col-md-6 caja9 tarjeta text-dark">
+
+
+                    <h2>Algunos consejos</h2>
+
+                    <ul>
+                        <li>El balance es mantener nuestro CSS lo suficiente específico cómo que se apliquen y tan
+                            general cómo para poder reescribir, o sobre escribir estilos si es necesario.</li>
+                        <li>Tu CSS es tan importante como JS y como HTML.</li>
+                        <li>Comenta y organiza tu código.</li>
+                        <li>Evita selectores demasiado específicos porque dificultan la lectura y cambiar el código si
+                            es necesario.</li>
+                        <li>Usar alguna metodología puede ayudarte a tener mucho más orden, escribir CSS es un proceso.
+                            No existe una forma 100% correcta o incorrecta de hacer las cosas.</li>
+                    </ul>
+                </div>
+
             </div>
-
-            <!-- CAJA 2 -->
-            <div class="col-12 caja2"></div>
-
-            <!-- CAJAS 3, 4 Y 5 -->
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 caja3 p-4 text-white"></div>
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 caja4 p-4 text-white"></div>
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 caja5 p-4 text-white"></div>
-
-            <!-- CAJAS 6 A 10 -->
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 caja6 p-3 text-white"></div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-2 caja7 p-3 text-white"></div>
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-2 caja8 p-3 text-white"></div>
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-2 caja9 p-3 text-white"></div>
-            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 caja10 p-3 text-white"></div>
-
         </div>
     </div>
 
-    <!-- Bootstrap JavaScript -->
+    <!-- BOOTSTRAP JAVASCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
-    </script>
+        </script>
 
 </body>
 

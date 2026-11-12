@@ -11,56 +11,61 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-    <!-- Estilos personalizados -->
+    <!-- ESTILOS PERSONALIZADOS -->
     <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
         .caja1 {
             min-height: 100px;
-            background-color: #C0969A;
+            background-color: #C58F96;
         }
 
         .caja2 {
             min-height: 300px;
-            background-color: #965C61;
+            background-color: #873F50;
         }
 
         .caja3 {
             min-height: 300px;
-            background-color: #EAC6C9;
+            background-color: #F3DDE1;
         }
 
         .caja4 {
             min-height: 300px;
-            background-color: #6B3035;
+            background-color: #A65368;
         }
 
         .caja5 {
             min-height: 300px;
-            background-color: #411216;
+            background-color: #572633;
         }
 
         .caja6 {
             min-height: 300px;
-            background-color: #dbbbba;
+            background-color: #E8C6CA;
         }
 
         .caja7 {
             min-height: 300px;
-            background-color: #E8D1D7;
+            background-color: #F1DDE2;
         }
 
         .caja8 {
             min-height: 300px;
-            background-color: #724368;
+            background-color: #754052;
         }
 
         .caja9 {
             min-height: 300px;
-            background-color: #E4D1E8;
+            background-color: #EAD9E5;
         }
 
         .caja10 {
             min-height: 300px;
-            background-color: #FFB0B2;
+            background-color: #E99DA8;
         }
 
         .banner {
@@ -68,7 +73,21 @@
             height: auto;
             display: block;
         }
+
+        /* BOTÓN PRINCIPAL */
+        .btn-vino {
+            background-color: #572633;
+            border: 2px solid #572633;
+            color: white;
+        }
+
+        .btn-vino:hover {
+            background-color: #754052;
+            border-color: #754052;
+            color: white;
+        }
     </style>
+
 </head>
 
 <body>
@@ -94,9 +113,7 @@
 
                 <a class="btn btn-outline-light" href="pseudo.html" role="button">
                     Pseudo Clases y Pseudo Elementos
-
                 </a>
-
 
                 <img src="./img/Icono.png" height="50" alt="Icono de pseudo clases" loading="lazy">
 
@@ -110,14 +127,18 @@
 
             <!-- ENCABEZADO -->
             <header class="col-12 caja1 d-flex justify-content-center align-items-center">
+
                 <h2 class="text-white text-center">
                     Academia Digital - Aprende Programación
                 </h2>
+
             </header>
 
             <!-- BANNER -->
             <div class="col-12 p-0">
+
                 <img src="./img/banner.jpeg" alt="Foto de aprendices aprendiendo CSS" class="banner">
+
             </div>
 
             <!-- CAJA 2: BANNER / HERO -->
@@ -130,16 +151,16 @@
                     Desarrolla tus habilidades creando sitios web y aplicaciones desde cero.
                 </p>
 
-                <a href="#estructura" class="btn btn-primary btn-lg">
+                <a href="#estructura" class="btn btn-vino btn-lg">
                     Comienza ahora
                 </a>
 
             </div>
 
-            <!-- CAJAS 3, 4 Y 5: TARJETAS DE CARACTERÍSTICAS -->
+            <!-- CAJAS 3, 4 Y 5: CARACTERÍSTICAS -->
 
             <div id="estructura" class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 caja3 p-4 text-white"
-                style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./img/html.png') center/cover no-repeat;">
+                style="background: linear-gradient(rgba(135, 63, 80, 0.65), rgba(135, 63, 80, 0.65)), url('./img/html.png') center/cover no-repeat;">
 
                 <h3>Fundamentos de HTML</h3>
 
@@ -150,7 +171,7 @@
             </div>
 
             <div id="especificidad" class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 caja4 p-4 text-white"
-                style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./img/css.jpg') center/cover no-repeat;">
+                style="background: linear-gradient(rgba(166, 83, 104, 0.65), rgba(166, 83, 104, 0.65)), url('./img/css.jpg') center/cover no-repeat;">
 
                 <h3>Diseño con CSS</h3>
 
@@ -161,7 +182,7 @@
             </div>
 
             <div id="pseudo" class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 caja5 p-4 text-white"
-                style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./img/bbo.jpeg') center/cover no-repeat;">
+                style="background: linear-gradient(rgba(87, 38, 51, 0.65), rgba(87, 38, 51, 0.65)), url('./img/bbo.jpeg') center/cover no-repeat;">
 
                 <h3>Herramientas Bootstrap</h3>
 
@@ -174,7 +195,7 @@
             <!-- CAJAS 6 A 10: SECCIÓN INFERIOR -->
 
             <div id="boxmodel"
-                class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 caja6 p-3 text-white d-flex flex-column align-items-center align-items-xl-start">
+                class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 caja6 p-3 text-dark d-flex flex-column align-items-center align-items-xl-start">
 
                 <h5>Recursos de Aprendizaje</h5>
 
@@ -182,23 +203,25 @@
                     style="max-height: 150px; width: auto;" loading="lazy">
 
                 <ul class="list-unstyled text-center text-xl-start">
+
                     <li>
-                        <a href="#" class="text-white text-decoration-none">
+                        <a href="#" class="text-dark text-decoration-none">
                             Guías de programación
                         </a>
                     </li>
 
                     <li>
-                        <a href="#" class="text-white text-decoration-none">
+                        <a href="#" class="text-dark text-decoration-none">
                             Proyectos prácticos
                         </a>
                     </li>
+
                 </ul>
 
             </div>
 
             <div
-                class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-2 caja7 p-3 text-white d-flex flex-column align-items-center justify-content-center text-center">
+                class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-2 caja7 p-3 text-dark d-flex flex-column align-items-center justify-content-center text-center">
 
                 <h4>+800</h4>
 
@@ -226,7 +249,7 @@
             </div>
 
             <div
-                class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-2 caja9 p-3 text-white d-flex flex-column align-items-center justify-content-center text-center">
+                class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-2 caja9 p-3 text-dark d-flex flex-column align-items-center justify-content-center text-center">
 
                 <h4>Todo el tiempo</h4>
 
@@ -240,7 +263,7 @@
             </div>
 
             <div
-                class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 caja10 p-3 text-white d-flex flex-column align-items-center align-items-xl-start">
+                class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 caja10 p-3 text-dark d-flex flex-column align-items-center align-items-xl-start">
 
                 <h5>Comunícate con nosotros</h5>
 
@@ -257,7 +280,7 @@
         </div>
     </div>
 
-    <!-- Bootstrap JavaScript -->
+    <!-- BOOTSTRAP JAVASCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
         </script>
